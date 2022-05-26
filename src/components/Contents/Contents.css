@@ -1,0 +1,222 @@
+
+
+.moviesRowCOntainer{
+    background-color: var(--color-background);
+    color: var(--color-white);
+    padding: 20px 20px  0;
+    position:relative;
+    width: 100%;
+    height: 100%;
+}
+
+.heading{
+    font-size:18px;
+    user-select: none;
+}
+
+.moviesSlider{
+    display: grid;
+    /* khoang cach giua */
+    gap: 6px;
+    grid-template-columns: repeat(300, 360px);
+    transition: all 0.3s linear;
+    user-select: none;
+    overflow-y: hidden;
+    overflow-x: auto;
+    overflow: hidden;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    scroll-behavior: smooth;
+}
+
+
+.movieItem{
+    transform: scale(1);
+    max-width: 400px;
+    max-height:500px;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s linear;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 6px;
+    transform: center left;
+    position: relative;
+}
+
+.movieItem:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    z-index: 10;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.movieName{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 4px;
+    text-align: center;
+    font-size:14px;
+    background-color: rgba(0,0,0,0.65);
+
+}
+
+.btnLeft{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    z-index: 20;
+    transform-origin: center ;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.65);
+    height: 50px;
+    width: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items:center;
+    transform: translateY(-20%);
+}
+
+.btnLeft:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.btnLeft:hover  svg{
+   opacity: 1;
+   transform: scale(1.2);
+}
+
+
+
+.btnRight{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    z-index: 20;
+    transform-origin: center ;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.65);
+    height: 50px;
+    width: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items:center;
+    transform: translateY(-20%);
+}
+
+.btnRight:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.btnRight:hover  svg{
+   opacity: 1;
+   transform: scale(1.2);
+}
+svg{
+    opacity: 0.7;
+    font-size:50px;
+}
+
+.isNetFlix{
+    height: 100px;
+    width: max-content;
+}
+
+.goToTop{
+    position: fixed;
+    z-index: 10;
+    right: 70px;
+    bottom: 50px;
+    font-size: 50px;
+    color: rgba(255,255,255,0.4);
+}
+
+.goToTop:hover{
+    color: rgba(255,255,255,0.8);
+}
+
+@media only screen and (max-width:1200px){
+    .moviesSlider{
+        display: grid;
+        /* khoang cach giua */
+        gap: 6px;
+        grid-template-columns: repeat(300, 300px);
+        transition: all 0.3s linear;
+        user-select: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        overflow: hidden;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        scroll-behavior: smooth;
+    }
+    
+}
+
+@media only screen and (max-width:992px){
+    .moviesSlider{
+        display: grid;
+        /* khoang cach giua */
+        gap: 6px;
+        grid-template-columns: repeat(300, 250px);
+        transition: all 0.3s linear;
+        user-select: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        overflow: hidden;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        scroll-behavior: smooth;
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    .moviesSlider{
+        display: grid;
+        /* khoang cach giua */
+        gap: 6px;
+        grid-template-columns: repeat(300, 200px);
+        transition: all 0.3s linear;
+        user-select: none;
+        overflow-y: hidden;
+        overflow-x: auto;
+        overflow: hidden;
+        padding-top: 28px;
+        padding-bottom: 28px;
+        scroll-behavior: smooth;
+    }
+
+    
+    
+}
+
+
+
+@media only screen and (max-width:600px){
+  
+    .goToTop{
+        position: fixed;
+        z-index: 10;
+        right: 40px;
+        bottom: 50px;
+        font-size: 50px;
+        color: rgba(255,255,255,0.4);
+    }
+    
+    .goToTop:hover{
+        color: rgba(255,255,255,0.8);
+    }
+    
+    
+}
